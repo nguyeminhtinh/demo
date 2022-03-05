@@ -228,7 +228,7 @@ a:focus {
 }
 
 .pos-4 {
-  grid-area: 13 / 9 / 32 / 22
+  grid-area: 13 / 9 / 32 / 22;
 }
 
 .pos-5 {
@@ -262,6 +262,8 @@ a:focus {
   margin: 10px 0;
   line-height: 1;
   position: relative;
+  top: 50%;
+  z-index: 999;
 }
 
 .content__title-sub {
