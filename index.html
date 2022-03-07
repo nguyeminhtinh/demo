@@ -92,78 +92,28 @@
       window.onload = function () {
         var tag = document.getElementById("displayVar");
         setTimeout(() => {
-          tag.innerText = "Trải qua hơn 1 năm quen nhau";
+          tag.innerText = "Đây là tất cả ảnh của e anh có trong máy";
         }, 1000);
         setTimeout(() => {
-          tag.innerText = "Biết anh vẫn còn nhiều điều chưa tốt";
+          tag.innerText = "Chúc em 8/3 xinh đẹp và nhiều niềm vui.";
         }, 3000);
         setTimeout(() => {
-          tag.innerText = "Nhưng anh sẽ cố gắng hơn theo từng ngày.";
+          tag.innerText = "Luôn tươi cười như trong hình này";
         }, 5000);
         setTimeout(() => {
-          tag.innerText = "Chúc em 8/3 xinh đẹp và nhiều niềm vui.";
-        }, 7000);
-        setTimeout(() => {
           tag.innerText = "Yêu em";
-        }, 9000);
+        }, 7000);
       };
     </script>
   </head>
   <body class="demo-1 loading">
     <main>
       <div class="frame"></div>
-      <div class="content">
-        <div class="grid">
-          <div class="grid__item pos-2">
-            <div
-              class="grid__item-img"
-              style="background-image: url(./img/img4.jpg)"
-              class="hover"
-            ></div>
-          </div>
-          <div class="grid__item pos-3">
-            <div
-              class="grid__item-img"
-              style="background-image: url(./img/img3.jpg)"
-              class="hover"
-            ></div>
-          </div>
-          <div class="grid__item pos-4">
-            <div
-              class="grid__item-img"
-              style="background-image: url(./img/img1.png)"
-              class="hover"
-            ></div>
-          </div>
-          <div class="grid__item pos-5">
-            <div
-              class="grid__item-img"
-              style="background-image: url(./img/img5.jpg)"
-              class="hover"
-            ></div>
-          </div>
-          <div class="grid__item pos-8">
-            <div
-              class="grid__item-img"
-              style="background-image: url(./img/img8.jpg)"
-              class="hover"
-            ></div>
-          </div>
-          <div class="grid__item pos-10">
-            <div
-              class="grid__item-img"
-              style="background-image: url(./img/img10.png)"
-              class="hover"
-            ></div>
-          </div>
-        </div>
+      <div class="content" style="background-image: url(./img/backgroud.jpg)">
         <h2 class="content__title no-select">
           <span>Love</span>
         </h2>
         <h2 class="content__title no-select">
-          <!-- <span class="content__title-sub"
-            >Chúc em 8/3 xinh đẹp và nhiều niềm vui. Yêu em</span
-          > -->
           <span id="displayVar" class="content__title-sub"></span>
         </h2>
         <audio id="mySound" loop autoplay>
