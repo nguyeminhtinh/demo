@@ -83,39 +83,9 @@
           "Please view this demo in a modern browser that supports CSS Variables."
         );
     </script>
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.js"
-      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-      crossorigin="anonymous"
-    ></script>
-    <script>
-      window.onload = function () {
-        var tag = document.getElementById("displayVar");
-        setTimeout(() => {
-          tag.innerText = "Đây là tất cả ảnh của e anh có trong máy";
-        }, 1000);
-        setTimeout(() => {
-          tag.innerText = "Chúc em 8/3 xinh đẹp và nhiều niềm vui.";
-        }, 3000);
-        setTimeout(() => {
-          tag.innerText = "Luôn tươi cười như trong hình này";
-        }, 5000);
-        setTimeout(() => {
-          tag.innerText = "Yêu em";
-        }, 7000);
-      };
-    </script>
   </head>
   <body class="demo-1 loading">
     <main>
-      <div class="frame"></div>
-      <div class="content" style="background-image: url(./img/backgroud.jpg)">
-        <h2 class="content__title no-select">
-          <span>Love</span>
-        </h2>
-        <h2 class="content__title no-select">
-          <span id="displayVar" class="content__title-sub"></span>
-        </h2>
         <audio id="mySound" loop autoplay>
           <source src="./img/UntilYou.mp3" type="audio/mpeg" />
         </audio>

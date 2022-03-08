@@ -315,6 +315,8 @@ a:focus {
 }
 .swiper {
   height: 360px !important;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .swiper-slide img {
   display: block;
