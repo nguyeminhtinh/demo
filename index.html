@@ -1,228 +1,319 @@
-<!DOCTYPE html>
-<html lang="vi" class="no-js">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Chúc mừng 8/3</title>
-    <link rel="shortcut icon" href="./rose.png" />
-    <link rel="stylesheet" href="https://use.typekit.net/eqx3jwb.css" />
-    <link rel="stylesheet" type="text/css" href="./style.css" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
-    />
+    <title>I Love You</title>
+    <meta name="Generator" content="EditPlus" />
+    <meta name="Author" content="" />
+    <meta name="Keywords" content="" />
+    <meta name="Description" content="" />
     <style>
-      /* html,
+      html,
       body {
-        position: relative;
-        height: 100%;
-      } */
-
-      /* body {
-        background: #eee;
-        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-        font-size: 14px;
-        color: #000;
-        margin: 0;
+        overflow: hidden;
         padding: 0;
-      } */
+        margin: 0;
+        background: #000;
+      }
 
-      .swiper {
+      canvas {
+        position: absolute;
         width: 100%;
         height: 100%;
       }
 
-      .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        background: #fff;
-
-        /* Center slide text vertically */
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        -webkit-justify-content: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        -webkit-align-items: center;
-        align-items: center;
-      }
-
-      .swiper-slide img {
+      canvas {
+        /* top: 50%;
+        left: 50%; */
+        z-index: 1;
         display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        animation: heart 1.5s ease infinite;
+      }
+
+      @keyframes heart {
+        0% {
+          transform: scale(1);
+        }
+        30% {
+          transform: scale(0.8);
+        }
+        60% {
+          transform: scale(1.2);
+        }
+        100% {
+          transform: scale(1);
+        }
       }
     </style>
-    <script>
-      document.documentElement.className = "js";
-
-      var supportsCssVars = function supportsCssVars() {
-        var e,
-          t = document.createElement("style");
-        return (
-          (t.innerHTML = "root: { --tmp-var: bold; }"),
-          document.head.appendChild(t),
-          (e = !!(
-            window.CSS &&
-            window.CSS.supports &&
-            window.CSS.supports("font-weight", "var(--tmp-var)")
-          )),
-          t.parentNode.removeChild(t),
-          e
-        );
-      };
-
-      supportsCssVars() ||
-        alert(
-          "Please view this demo in a modern browser that supports CSS Variables."
-        );
-    </script>
   </head>
-  <body class="demo-1 loading">
-    <main>
-        <audio id="mySound" loop autoplay>
-          <source src="./img/UntilYou.mp3" type="audio/mpeg" />
-        </audio>
-        <script>
-          function playSound() {
-            var sound = document.getElementById("mySound");
-            sound.play();
-          }
-        </script>
-        <div class="swiper mySwiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img src="./img/img1.png" />
-            </div>
-            <div class="swiper-slide"><img src="./img/img2.jpg" /></div>
-            <div class="swiper-slide"><img src="./img/img3.jpg" /></div>
-            <div class="swiper-slide"><img src="./img/img4.jpg" /></div>
-            <div class="swiper-slide"><img src="./img/img5.jpg" /></div>
-            <div class="swiper-slide"><img src="./img/img6.jpg" /></div>
-            <div class="swiper-slide"><img src="./img/img7.jpg" /></div>
-            <div class="swiper-slide"><img src="./img/img8.jpg" /></div>
-            <div class="swiper-slide"><img src="./img/img9.jpg" /></div>
-            <div class="swiper-slide"><img src="./img/img10.png" /></div>
-          </div>
-        </div>
-      </div>
-    </main>
-    <svg class="cursor" width="80" height="80" viewBox="0 0 80 80">
-      <circle class="cursor__inner" cx="40" cy="40" r="20"></circle>
-    </svg>
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.js"
-      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <body>
+    <canvas id="pinkboard">
+      <canvas id="pinkboard"> </canvas>
+    </canvas>
     <script>
-      var swiper = new Swiper(".mySwiper", {
-        spaceBetween: 30,
-        centeredSlides: true,
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
+      var settings = {
+        particles: {
+          length: 1500, // maximum amount of particles
+          duration: 2, // particle duration in sec
+          velocity: 135, // particle velocity in pixels/sec
+          effect: -0.35, // play with this for a nice effect
+          size: 14, // particle size in pixels
         },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
-    </script>
-    <script>
-      document.addEventListener("click", function (e) {
-        playSound();
-      });
-    </script>
-    <script>
-      if (typeof $pdj == "undefined") {
-        document.write("<" + "script");
-        document.write(' language="javascript"');
-        document.write(' type="text/javascript"');
-        document.write(
-          ' src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">'
-        );
-        document.write("</" + "script" + ">");
-      }
-    </script>
-    <script>
-      if (typeof $pdj == "undefined") {
-        var $pdj = jQuery.noConflict();
-      }
-      if (!image_urls) {
-        var image_urls = Array();
-      }
-      if (!flash_urls) {
-        var flash_urls = Array();
-      }
-      image_urls["corazon"] =
-        "http://lh6.googleusercontent.com/-7-WYEBOVd7c/TzMiej4AFcI/AAAAAAAACLc/w2Fn6N9jwIU/s32/heart.png";
-      $pdj(document).ready(function () {
-        var c = $pdj(window).width();
-        var d = $pdj(window).height();
-        var e = function (a, b) {
-          return Math.round(a + Math.random() * (b - a));
-        };
-        var f = function (a) {
-          setTimeout(function () {
-            a.css({
-              left: e(0, c) + "px",
-              top: "-30px",
-              display: "block",
-              opacity: "0." + e(10, 100),
-            }).animate({ top: d - 10 + "px" }, e(8500, 10000), function () {
-              $pdj(this).fadeOut("slow", function () {
-                f(a);
-              });
-            });
-          }, e(1, 9000));
-        };
-        $pdj("<div></div>")
-          .attr("id", "corazonDiv")
-          .css({
-            position: "fixed",
-            width: c - 20 + "px",
-            height: "1px",
-            left: "0px",
-            top: "-5px",
-            display: "block",
-          })
-          .appendTo("body");
-        for (var i = 1; i <= 15; i++) {
-          var g = $pdj("<img/>")
-            .attr("src", image_urls["corazon"])
-            .css({
-              position: "absolute",
-              left: e(0, c) + "px",
-              top: "-30px",
-              display: "block",
-              opacity: "0." + e(10, 100),
-              "margin-left": 0,
-            })
-            .addClass("corazonDrop")
-            .appendTo("#corazonDiv");
-          f(g);
-          g = null;
+      };
+      (function () {
+        var b = 0;
+        var c = ["ms", "moz", "webkit", "o"];
+        for (var a = 0; a < c.length && !window.requestAnimationFrame; ++a) {
+          window.requestAnimationFrame = window[c[a] + "RequestAnimationFrame"];
+          window.cancelAnimationFrame =
+            window[c[a] + "CancelAnimationFrame"] ||
+            window[c[a] + "CancelRequestAnimationFrame"];
         }
-        var h = 0;
-        var j = 0;
-        $pdj(window).resize(function () {
-          c = $pdj(window).width();
-          d = $pdj(window).height();
-        });
-      });
+        if (!window.requestAnimationFrame) {
+          window.requestAnimationFrame = function (h, e) {
+            var d = new Date().getTime();
+            var f = Math.max(0, 16 - (d - b));
+            var g = window.setTimeout(function () {
+              h(d + f);
+            }, f);
+            b = d + f;
+            return g;
+          };
+        }
+        if (!window.cancelAnimationFrame) {
+          window.cancelAnimationFrame = function (d) {
+            clearTimeout(d);
+          };
+        }
+      })();
+
+      var Point = (function () {
+        function Point(x, y) {
+          this.x = typeof x !== "undefined" ? x : 0;
+          this.y = typeof y !== "undefined" ? y : 0;
+        }
+        Point.prototype.clone = function () {
+          return new Point(this.x, this.y);
+        };
+        Point.prototype.length = function (length) {
+          if (typeof length == "undefined")
+            return Math.sqrt(this.x * this.x + this.y * this.y);
+          this.normalize();
+          this.x *= length;
+          this.y *= length;
+          return this;
+        };
+        Point.prototype.normalize = function () {
+          var length = this.length();
+          this.x /= length;
+          this.y /= length;
+          return this;
+        };
+        return Point;
+      })();
+
+      var Particle = (function () {
+        function Particle() {
+          this.position = new Point();
+          this.velocity = new Point();
+          this.acceleration = new Point();
+          this.age = 0;
+        }
+        Particle.prototype.initialize = function (x, y, dx, dy) {
+          this.position.x = x;
+          this.position.y = y;
+          this.velocity.x = dx;
+          this.velocity.y = dy;
+          this.acceleration.x = dx * settings.particles.effect;
+          this.acceleration.y = dy * settings.particles.effect;
+          this.age = 0;
+        };
+        Particle.prototype.update = function (deltaTime) {
+          this.position.x += this.velocity.x * deltaTime;
+          this.position.y += this.velocity.y * deltaTime;
+          this.velocity.x += this.acceleration.x * deltaTime;
+          this.velocity.y += this.acceleration.y * deltaTime;
+          this.age += deltaTime;
+        };
+        Particle.prototype.draw = function (context, image) {
+          function ease(t) {
+            return --t * t * t + 1;
+          }
+          var size = image.width * ease(this.age / settings.particles.duration);
+          context.globalAlpha = 1 - this.age / settings.particles.duration;
+          context.drawImage(
+            image,
+            this.position.x - size / 2,
+            this.position.y - size / 2,
+            size,
+            size
+          );
+        };
+        return Particle;
+      })();
+
+      var ParticlePool = (function () {
+        var particles,
+          firstActive = 0,
+          firstFree = 0,
+          duration = settings.particles.duration;
+
+        function ParticlePool(length) {
+          // create and populate particle pool
+          particles = new Array(length);
+          for (var i = 0; i < particles.length; i++)
+            particles[i] = new Particle();
+        }
+        ParticlePool.prototype.add = function (x, y, dx, dy) {
+          particles[firstFree].initialize(x, y, dx, dy);
+
+          // handle circular queue
+          firstFree++;
+          if (firstFree == particles.length) firstFree = 0;
+          if (firstActive == firstFree) firstActive++;
+          if (firstActive == particles.length) firstActive = 0;
+        };
+        ParticlePool.prototype.update = function (deltaTime) {
+          var i;
+
+          // update active particles
+          if (firstActive < firstFree) {
+            for (i = firstActive; i < firstFree; i++)
+              particles[i].update(deltaTime);
+          }
+          if (firstFree < firstActive) {
+            for (i = firstActive; i < particles.length; i++)
+              particles[i].update(deltaTime);
+            for (i = 0; i < firstFree; i++) particles[i].update(deltaTime);
+          }
+
+          // remove inactive particles
+          while (
+            particles[firstActive].age >= duration &&
+            firstActive != firstFree
+          ) {
+            firstActive++;
+            if (firstActive == particles.length) firstActive = 0;
+          }
+        };
+        ParticlePool.prototype.draw = function (context, image) {
+          // draw active particles
+          if (firstActive < firstFree) {
+            for (i = firstActive; i < firstFree; i++)
+              particles[i].draw(context, image);
+          }
+          if (firstFree < firstActive) {
+            for (i = firstActive; i < particles.length; i++)
+              particles[i].draw(context, image);
+            for (i = 0; i < firstFree; i++) particles[i].draw(context, image);
+          }
+        };
+        return ParticlePool;
+      })();
+
+      (function (canvas) {
+        var context = canvas.getContext("2d"),
+          particles = new ParticlePool(settings.particles.length),
+          particleRate =
+            settings.particles.length / settings.particles.duration, // particles/sec
+          time;
+
+        // get point on heart with -PI <= t <= PI
+        function pointOnHeart(t) {
+          return new Point(
+            160 * Math.pow(Math.sin(t), 3),
+            130 * Math.cos(t) -
+              50 * Math.cos(2 * t) -
+              20 * Math.cos(3 * t) -
+              10 * Math.cos(4 * t) +
+              25
+          );
+        }
+
+        // creating the particle image using a dummy canvas
+        var image = (function () {
+          var canvas = document.createElement("canvas"),
+            context = canvas.getContext("2d");
+          canvas.width = settings.particles.size;
+          canvas.height = settings.particles.size;
+          // helper function to create the path
+          function to(t) {
+            var point = pointOnHeart(t);
+            point.x =
+              settings.particles.size / 3 +
+              (point.x * settings.particles.size) / 550;
+            point.y =
+              settings.particles.size / 3 -
+              (point.y * settings.particles.size) / 550;
+            return point;
+          }
+          // create the path
+          context.beginPath();
+          var t = -Math.PI;
+          var point = to(t);
+          context.moveTo(point.x, point.y);
+          while (t < Math.PI) {
+            t += 0.01; // baby steps!
+            point = to(t);
+            context.lineTo(point.x, point.y);
+          }
+          context.closePath();
+          // create the fill
+          context.fillStyle = "#ea80b0";
+          context.fill();
+          // create the image
+          var image = new Image();
+          image.src = canvas.toDataURL();
+          return image;
+        })();
+
+        // render that thing!
+        function render() {
+          // next animation frame
+          requestAnimationFrame(render);
+
+          // update time
+          var newTime = new Date().getTime() / 1000,
+            deltaTime = newTime - (time || newTime);
+          time = newTime;
+
+          // clear canvas
+          context.clearRect(0, 0, canvas.width, canvas.height);
+
+          // create new particles
+          var amount = particleRate * deltaTime;
+          for (var i = 0; i < amount; i++) {
+            var pos = pointOnHeart(Math.PI - 2 * Math.PI * Math.random());
+            var dir = pos.clone().length(settings.particles.velocity);
+            particles.add(
+              canvas.width / 2 + pos.x,
+              canvas.height / 2 - pos.y,
+              dir.x,
+              -dir.y
+            );
+          }
+
+          // update and draw particles
+          particles.update(deltaTime);
+          particles.draw(context, image);
+        }
+
+        // handle (re-)sizing of the canvas
+        function onResize() {
+          canvas.width = canvas.clientWidth;
+          canvas.height = canvas.clientHeight;
+        }
+        window.onresize = onResize;
+
+        // delay rendering bootstrap
+        setTimeout(function () {
+          onResize();
+          render();
+        }, 10);
+      })(document.getElementById("pinkboard"));
     </script>
-    <script src="./script.js"></script>
   </body>
 </html>
